@@ -1,0 +1,102 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right,#ff512f,#dd2476,#7b2ff7
+);
+    padding:10px 20px;
+    color:#ffffff;
+}
+.navbar_brand a{
+    color:white;
+    text-decoration: none;
+    font-size: 2rem;
+}
+.navbar_links ul{
+    display: flex;
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+.navbar_links li{
+    margin: 0 10px;
+}
+.navbar_links a{
+    text-transform: uppercase;
+    color:white;
+    text-decoration: none;
+    font-size:1em;
+}
+
+.navbar_links a:hover{
+    text-decoration: underline;
+}
+/*  =====================
+    Sign-In CSS Start
+    =====================*/
+   .signin-area{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+        padding: 20px;
+    }
+   .signin-area h2{
+        text-transform: uppercase;
+        color:#333;
+        margin-bottom: 20px;
+   }
+   .signin-form{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        background-color: white;
+        padding:40px;
+        border-radius: 10px;
+        box-shadow: 0 4x 8x rgba(0, 0, 0, 0.2);
+   }
+   .signin-form input{
+        margin-bottom: 15px;
+        padding: 10px;
+        border:1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+        outline: none;
+   }
+     .signin-form input:hover{
+       border-color: #4caf50;
+   }
+   .signin-form button{
+        padding:10px;
+        background-color: #4caf50;
+        color:#ffffff;
+        border:none;
+        border-radius:5px;
+        cursor:pointer;
+        font-size:1rem;
+        transition: background-color 0.3s;
+   }
+      .signin-form button:hover{
+        background-color: #45a049;
+   }
+/* ==========================
+    Sign-In CSS End
+   ==========================*/
+
+@media(max-width:768px){
+    .navbar{
+        display: block;
+        text-align: center;
+    }
+    .navbar_links ul{
+        flex-direction: column;
+    }
+    .navbar_links li{
+        padding: 10px 20px;
+        background-color: rgba(124, 124, 49, 0.322);
+        border-radius: 10px;
+        margin:5px auto;
+    }
+}

@@ -13,6 +13,9 @@ import About from './pages/About.jsx';
 import NotFound from './pages/NotFound.jsx';
 import Contact from './pages/Contact.jsx';
 import Header from './layout/Header.jsx';
+import Products from './pages/Products.jsx';
+import SignIn from './pages/SignIn.jsx';
+import Profile from './pages/Profile.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,7 +25,15 @@ const router = createBrowserRouter([
   {
       path: "/",
       element: <Home/>,
+  },
+  {
+    path:"/SignIn",
+    element:<SignIn/>
   }, 
+  {
+    path:"/Profile",
+    element:<Profile/>
+  },
   {
       path: "/About",
       element: <About/>,
@@ -30,6 +41,10 @@ const router = createBrowserRouter([
   {
       path:"/Contact",
       element: <Contact/>
+  },
+  {
+    path:"/Products",
+    element:<Products/>
   },
   {
       path: "*",

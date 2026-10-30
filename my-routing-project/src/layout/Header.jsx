@@ -3,16 +3,19 @@ import { Link, Outlet } from 'react-router-dom'
 
 const Header = () => {
   return (
+    <>
     <div>
         <header className='navbar'>
                 <div className='navbar_brand'>
-                    <Link to="/">My React App</Link>
+                    <Link to="/"><span style= {{color:'yellow'}}>C</span>oding Wo<span style={{color:"yellowgreen"}} >rld</span></Link>
                 </div>
-
                 <nav className='navbar_links'>
                   <ul>
                     <li>
                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                      <Link to ="/SignIn">Sign In</Link>
                     </li>
                     <li>
                         <Link to="/About">About</Link>
@@ -24,11 +27,12 @@ const Header = () => {
                       <Link to="/Contact">Contact</Link>
                     </li>
                   </ul>
-
-                  <Outlet/>
                 </nav>
         </header>
+        <Outlet/>
     </div>
+    </>
+    
   )
 }
 export default Header
