@@ -91,13 +91,6 @@
 /* ===========================
     Profile Page CSS Start
    ===========================*/
-
-   .profile-wrapper{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-   }
     .profile-container{
         display: flex;
         flex-direction: column;

@@ -16,6 +16,7 @@ import Header from './layout/Header.jsx';
 import Products from './pages/Products.jsx';
 import SignIn from './pages/SignIn.jsx';
 import Profile from './pages/Profile.jsx';
+import ProductDetails from './components/ProductDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
   {
     path:"/Products",
     element:<Products/>
+  },
+    {
+    path:"/Products/:id",
+    element:<ProductDetails/>
   },
   {
       path: "*",
