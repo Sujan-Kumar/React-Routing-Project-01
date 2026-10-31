@@ -32,7 +32,7 @@ const Products = () => {
 
 
   return (
-    <div>
+    <div className='products-container'>
       <h2>All Products</h2>
       {isLoading && <p>Products Are Loading</p>}
       {error && <p>Error Found!</p>}
@@ -40,14 +40,15 @@ const Products = () => {
           <section className="products">
           {
             products && products.length>0 && products.map((product)=>{
-              const{id, title, price, description, category} = product;
+              const{id, title, price, description, category, images} = product;
               return(
                   <article key={product.id} className='product'>
                       <h3>{title}</h3>
+                      <img src={images[0]} alt={product.title} className='product_image'/>
                       <p>Category: {category}</p>
                       <p>Price: {price}</p>
                       <p>{description && description}</p>
-                      <Link to={`/Products/${id}`} state={product}>Show Details</Link>
+                      <Link to={`/Products/${id}`} state={product} className='product_link'>Show Details</Link>
                   </article>
               )
             })
