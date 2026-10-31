@@ -1,2 +1,3 @@
 ## 01. React Routing Basics
-- useNavigate() Hook 
+- useNavigate() Hook: For Page Navigation/Change Routing Path
+- useLocation() Hook: For Data Receiving while Routing

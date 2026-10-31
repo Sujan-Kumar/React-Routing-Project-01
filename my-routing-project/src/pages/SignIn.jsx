@@ -18,7 +18,13 @@ const SignIn = () => {
     const handleSubmit = (event)=>{
             event.preventDefault();
            if(email === "sujanishurdi@gmail.com" && password ==='423291'){
-                navigate("/Profile");
+                const user ={
+                        name: 'Sujan Kumar Dash',
+                        email: 'sujanishurdi@gmail.com',
+                        city: 'Rajshahi',
+                        country: 'Bangladesh'
+                }
+                navigate("/Profile", {state:user});
            }else{
             navigate("/");
            }
