@@ -144,6 +144,7 @@
         color:#4caf50;
         text-align: center;
         margin-bottom:20px;
+        text-transform: uppercase;
     }
     .products{
         display: grid;
@@ -178,13 +179,18 @@
     .product_link{
         display: inline-block;
         margin-top:10px;
-        color:#4caf50;
+        color:#6bf12c;
         text-decoration: none;
         font-weight: bold;
         text-align: center;
+        background-color: rgba(128, 0, 128, 0.514);
+        padding: 10px 15px;
+        border-radius: 10px;
+        transition: 0.3s;
     }
     .product_link:hover{
-        text-decoration: underline;
+        background-color: #ff522f48;
+        color:#000;
     }
     .product-details{
         padding:20px;
@@ -198,6 +204,7 @@
         color:#45a050;
         text-align: center;
         margin-bottom: 20px;
+        text-transform: uppercase;
     }
     .product-details_article{
         background-color: #fff;

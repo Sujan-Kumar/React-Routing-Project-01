@@ -7,7 +7,7 @@ const Header = () => {
     <div>
         <header className='navbar'>
                 <div className='navbar_brand'>
-                    <Link to="/"><span style= {{color:'yellow'}}>C</span>oding Wo<span style={{color:"yellowgreen"}} >rld</span></Link>
+                    <Link to="/"><span style= {{color:'yellow'}}>C</span>osmetic Ga<span style={{color:"yellowgreen"}} >llery</span></Link>
                 </div>
                 <nav className='navbar_links'>
                   <ul>

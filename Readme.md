@@ -3,3 +3,7 @@
 - useLocation() Hook: For Data Receiving while Routing
 - Data Fetching Using API Call
 - Products Page and Single Product Page Design Using Raw CSS
+
+## 02. Dynamic Routing
+- Manipulation Dynamic Routing using ustParams() and useEffect() Hook
+- Using JS Promise and Diffent Methods of Promise whie Routing
