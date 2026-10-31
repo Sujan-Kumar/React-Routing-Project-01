@@ -6,4 +6,4 @@
 
 ## 02. Dynamic Routing
 - Manipulation Dynamic Routing using ustParams() and useEffect() Hook
-- Using JS Promise and Diffent Methods of Promise whie Routing
+- Using JS Promise and Diffent Methods of Promise while Routing
