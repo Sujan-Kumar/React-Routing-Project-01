@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 
 const Header = () => {
+  const [signIn, setSignIn] = useState(false);
+
   return (
     <>
     <div>
@@ -14,14 +16,24 @@ const Header = () => {
                     <li>
                        <Link to="/">Home</Link>
                     </li>
-                    <li>
-                      <Link to ="/SignIn">Sign In</Link>
-                    </li>
+                    {
+                      signIn &&
+                      <>
+                        <li>
+                          <Link to ="/SignOut" onClick={()=>{setSignIn(false)}}>Sign Out</Link>
+                        </li>
+                      </>
+                    }
+                    {
+                      !signIn &&
+                      <>
+                        <li>
+                          <Link to ="/SignIn" onClick={()=>{setSignIn(true)}} >Sign In</Link>
+                        </li>
+                      </>
+                    }
                     <li>
                         <Link to="/About">About</Link>
-                    </li>
-                    <li>
-                        <Link to="/Products">Products</Link>
                     </li>
                     <li>
                       <Link to="/Contact">Contact</Link>

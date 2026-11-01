@@ -7,3 +7,9 @@
 ## 02. Dynamic Routing
 - Manipulation Dynamic Routing using ustParams() and useEffect() Hook
 - Using JS Promise and Diffent Methods of Promise while Routing
+
+## Handlink Not Found Erros
+- Error Handling Using useRouterError() Hook
+
+## Protected Routes
+- Protected Route Manipulation Using Children Property in React Router

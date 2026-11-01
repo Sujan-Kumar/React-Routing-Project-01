@@ -47,7 +47,7 @@ const ProductDetails = () => {
                         <p><strong>Brand:</strong> {product.brand}</p>
                         <p><strong>Category:</strong> {product.category}</p>
                         <p><strong>Description:</strong> {product.description}</p>
-                        <Link to='/Products' className='product_link'>Go To Products</Link>
+                        <Link to='/' className='product_link'>Go To Products</Link>
                     </article>
                 }        
              
