@@ -22,9 +22,13 @@ const SignIn = () => {
                         name: 'Sujan Kumar Dash',
                         email: 'sujanishurdi@gmail.com',
                         city: 'Rajshahi',
-                        country: 'Bangladesh'
+                        country: 'Bangladesh',
+                        admin: false
                 }
-                navigate("/Profile", {state:user});
+                localStorage.setItem('userData', JSON.stringify(user));
+                const path = user.admin ? "/dashboard/admin/profile": "/dashboard/user/profile"
+                
+                navigate(path, {state:user});
            }else{
             navigate("/");
            }

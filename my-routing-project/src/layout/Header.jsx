@@ -1,8 +1,18 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 
 const Header = () => {
-  const [signIn, setSignIn] = useState(false);
+  const [isSignIn, setisSignIn] = useState(false);
+
+  useEffect(()=>{
+    const signInStatus =JSON.parse(localStorage.getItem('isSignIn'));
+    setisSignIn(signInStatus);
+  },[]);
+
+  const handleSignOut =()=>{
+    setisSignIn(false);
+    localStorage.setItem("isSignIn", JSON.stringify(true));
+  };
 
   return (
     <>
@@ -17,18 +27,18 @@ const Header = () => {
                        <Link to="/">Home</Link>
                     </li>
                     {
-                      signIn &&
+                      isSignIn &&
                       <>
                         <li>
-                          <Link to ="/SignOut" onClick={()=>{setSignIn(false)}}>Sign Out</Link>
+                          <Link to ="/SignOut" onClick={handleSignOut}>Sign Out</Link>
                         </li>
                       </>
                     }
                     {
-                      !signIn &&
+                      !isSignIn &&
                       <>
                         <li>
-                          <Link to ="/SignIn" onClick={()=>{setSignIn(true)}} >Sign In</Link>
+                          <Link to ="/SignIn">Sign In</Link>
                         </li>
                       </>
                     }

@@ -1,10 +1,12 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import SignIn from './SignIn';
 
 const ProtectedRoute = () => {
-    const isSignedIn = true;
-    
+    const location  = useLocation();
+
+    const isSignedIn = localStorage.getItem('isSignIn') && JSON.parse(localStorage.getItem("isSignIn"));
+
     return isSignedIn?<Outlet/>:<SignIn/>
 }
 
